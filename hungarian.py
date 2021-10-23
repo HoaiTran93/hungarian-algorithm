@@ -34,7 +34,8 @@ class Hungarian():
         
         desc = '#' * 80 + '\n'
         for index in range(len(self.row_ind)):
-            desc += 'TeacherID: {:s} <===> ClassID: {:s}'.format(self.rows[index], self.columns[index])
+            desc += 'TeacherID: {:s} <===> ClassID: {:s} <===> Cost: {:.1f}'.format(self.rows[index], self.columns[index],
+                                                                                    self.matrixPriority[int(self.row_ind[index]),int(self.col_ind[index])])
             desc += '\n'
         desc += '#' * 80 + '\n'
         desc += 'Sum priority: {:.1f}'.format(self.sum_matrix)
